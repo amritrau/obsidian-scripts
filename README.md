@@ -10,7 +10,7 @@ git submodule add git@github.com:amritrau/obsidian-scripts.git .bin
 2. Move `Makefile` into the root directory of your Obsidian vault repository.
 ```bash
 cd .bin
-mv Makefile path/to/obsidian/vault/Makefile
+mv Makefile path/to/vaults/root/Makefile
 ```
 
 3. Install the necessary requirements. (Consider using a [virtualenv](https://docs.python.org/3/tutorial/venv.html).)
