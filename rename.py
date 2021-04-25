@@ -21,7 +21,7 @@ import pathlib
 import re
 
 from constants import INDEX_PREFIX
-from utils import slugify, get_zk_prefix, hash_note
+from utils import slugify, get_zk_prefix, hash_note, flush
 
 logging.basicConfig(level=logging.INFO)
 
@@ -47,6 +47,11 @@ def main(vault):
             else:
                 # Generate a unique title based on the note's contents
                 slug = f"untitled-{hash_note(filename)}"
+
+                # Add a heading to the top of the file and write back
+                lines = note.content.split('\n').insert(0, f"# {slug}\n")
+                note.content = '\n'.join(lines)
+                flush(note, filename)
             
             new_name = f"{prefix}-{slug}.md"
             

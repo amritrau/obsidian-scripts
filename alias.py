@@ -21,13 +21,9 @@ import pathlib
 import re
 
 from constants import INDEX_PREFIX
+from utils import flush
 
 logging.basicConfig(level=logging.INFO)
-
-
-def flush(note, filename):
-    with open(filename, 'w') as f:
-        f.write(frontmatter.dumps(note))
 
 
 @click.command()
