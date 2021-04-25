@@ -1,5 +1,5 @@
 # obsidian-scripts
-:warning: Be sure to make a backup of your vault before attempting to run these scripts. This repository is unstable.
+Be sure to make a backup of your vault before attempting to run these scripts. This repository is unstable.
 
 ## Setup
 1. Add this repository as a submodule at the top level of your Obsidian vault repository.
@@ -7,10 +7,10 @@
 git submodule add git@github.com:amritrau/obsidian-scripts.git .bin
 ```
 
-2. Move `Makefile` into the root directory of your Obsidian vault repository.
+2. Copy `Makefile` into the root directory of your Obsidian vault repository.
 ```bash
 cd .bin
-mv Makefile path/to/obsidian/vault/Makefile
+cp Makefile path/to/vaults/root/Makefile
 ```
 
 3. Install the necessary requirements. (Consider using a [virtualenv](https://docs.python.org/3/tutorial/venv.html).)
