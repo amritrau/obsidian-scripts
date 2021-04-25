@@ -18,6 +18,7 @@ import frontmatter
 import logging
 import os
 import pathlib
+import re
 
 from constants import INDEX_PREFIX
 from utils import slugify, get_zk_prefix, hash_note
