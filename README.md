@@ -1,4 +1,6 @@
 # obsidian-scripts
+:warning: Be sure to make a backup of your vault before attempting to run these scripts. This repository is unstable.
+
 ## Setup
 1. Add this repository as a submodule at the top level of your Obsidian vault repository.
 ```bash
