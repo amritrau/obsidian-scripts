@@ -49,7 +49,8 @@ def main(vault):
                 slug = f"untitled-{hash_note(filename)}"
 
                 # Add a heading to the top of the file and write back
-                lines = note.content.split('\n').insert(0, f"# {slug}\n")
+                lines = note.content.split('\n')
+                lines.insert(0, f"# {slug}\n")
                 note.content = '\n'.join(lines)
                 flush(note, filename)
             
