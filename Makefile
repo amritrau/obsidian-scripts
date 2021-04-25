@@ -6,10 +6,10 @@ PY=python
 BIN=.bin
 
 index: alias
-	$(PY) $(BIN)/index.py $(VAULT)
+	$(PY) $(BIN)/src/index.py $(VAULT)
 
 alias: rename
-	$(PY) $(BIN)/alias.py --overwrite $(VAULT)
+	$(PY) $(BIN)/src/alias.py --overwrite $(VAULT)
 
 rename: 
-	$(PY) $(BIN)/rename.py $(VAULT)
+	$(PY) $(BIN)/src/rename.py $(VAULT)
