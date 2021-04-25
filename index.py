@@ -17,19 +17,11 @@ import frontmatter
 import logging
 import os
 import pathlib
-import re
-import unicodedata
 
 from constants import INDEX_PREFIX
+from utils import slugify
 
 logging.basicConfig(level=logging.INFO)
-
-
-def slugify(value):
-    """From StackOverflow #5574042"""
-    value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore').decode('ascii')
-    value = re.sub('[^\w\s-]', '', value).strip().lower()
-    return re.sub('[-\s]+', '-', value)
 
 
 @click.command()

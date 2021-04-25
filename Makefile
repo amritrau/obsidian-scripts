@@ -1,5 +1,6 @@
 .PHONY: index
 .PHONY: alias
+.PHONY: rename
 
 PY=python
 BIN=.bin
@@ -7,5 +8,8 @@ BIN=.bin
 index: alias
 	$(PY) $(BIN)/index.py $(VAULT)
 
-alias:
+alias: rename
 	$(PY) $(BIN)/alias.py --overwrite $(VAULT)
+
+rename: 
+	$(PY) $(BIN)/rename.py $(VAULT)
