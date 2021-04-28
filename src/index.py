@@ -41,6 +41,11 @@ def main(vault):
             reverse=True
         )
 
+        # Delete any existing index files (names that start with INDEX_PREFIX)
+        existing_indexes = d.glob(f"{INDEX_PREFIX}*.md")
+        for index_file in existing_indexes:
+            index_file.unlink()
+
         if len(filenames) > 0:
             def make_entry(filename):
                 # Construct the index entry
